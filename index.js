@@ -10,9 +10,6 @@ const compiler = webpack(config);
 const middleware = webpackMiddleware(compiler, {
   publicPath: "/",
   serverSideRender: true,
-  watchOptions: {
-    ignored: /.*/
-  }
 });
 app.use(middleware);
 app.get('/', (req, res) => {
